@@ -17,7 +17,7 @@ with DAG(
             CREATE TABLE IF NOT EXISTS users (
                 firstname TEXT NOT NULL,
                 lastname TEXT NOT NULL,
-                country TEXT NIT NULL
+                country TEXT NOT NULL
             );
         '''
     )
