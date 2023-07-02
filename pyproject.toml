@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "airflow-dags-minikube"
+version = "0.1.0"
+description = ""
+authors = ["Abdenour KEDDAR <oussama.keddar@epitech.eu>"]
+readme = "README.md"
+packages = [{include = "airflow_dags_minikube"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+apache-airflow = "^2.6.2"
+postgres = "^4.0"
+apache-airflow-providers-postgres = "^5.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
