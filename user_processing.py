@@ -54,7 +54,7 @@ with DAG(
         http_conn_id='user_api',
         endpoint='api/',
         method='GET',
-        response_filter=lambda response: json.load(response.text),
+        response_filter=lambda response: json.loads(response.text),
         log_response=True
     )
 
