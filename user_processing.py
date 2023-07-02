@@ -24,6 +24,7 @@ def _process_user(ti):
     )
     processed_user.to_csv('/tmp/processed_user.csv')
 
+
 with DAG(
         'user_processing',
         start_date=datetime(2023, 7, 1),
@@ -61,3 +62,5 @@ with DAG(
         task_id='process_user',
         python_callable=_process_user
     )
+
+    extract_user >> process_user
