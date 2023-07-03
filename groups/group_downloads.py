@@ -3,9 +3,9 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 from airflow.utils.task_group import TaskGroup
 
-def download_tasks(parent_dag_id, child_dag_id, args):
-    with TaskGroup("downloads", tooltip="Download Tasks") as group:
 
+def download_tasks():
+    with TaskGroup("downloads", tooltip="Download Tasks") as group:
         download_a = BashOperator(
             task_id='download_a',
             bash_command='sleep 10'
